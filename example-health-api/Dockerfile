@@ -12,8 +12,7 @@ ENV INSTALL_DIR /opt/ol/wlp/
 ENV SERVER_DIR /opt/ol/wlp/usr/servers/defaultServer/
 
 # Add MySQL-Connector
-RUN curl -o ${INSTALL_DIR}lib/mysql-connector-java-8.0.16.jar
-https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.16/mysqlconnector-java-8.0.16.jar
+RUN curl -o ${INSTALL_DIR}lib/mysql-connector-java-8.0.16.jar https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.16/mysqlconnector-java-8.0.16.jar
 COPY liberty-mysql/mysql-driver.xml ${SERVER_DIR}configDropins/defaults/
 
 # Copy WAR-file from builder image
